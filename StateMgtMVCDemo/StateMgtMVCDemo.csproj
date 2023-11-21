@@ -186,6 +186,7 @@
     <Content Include="Views\Employee\EmpDetail.cshtml" />
     <Content Include="Views\Department\ShowDeptDetails.cshtml" />
     <Content Include="Views\Department\UsingParameter.cshtml" />
+    <Content Include="Views\Employee\DisplayEmployees.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

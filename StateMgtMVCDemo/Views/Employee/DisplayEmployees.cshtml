@@ -1,0 +1,64 @@
+﻿@using  StateMgtMVCDemo.Models
+@{
+    ViewBag.Title = "DisplayEmployees";
+}
+
+<h2>DisplayEmployees</h2>
+
+<h1>List of Employees using ViewBag</h1>
+<label>EmpCount=@ViewBag.cnt</label>
+<table class="table table-bordered">
+    <tr>
+        <td>EmpID</td>
+        <td>EmpName</td>
+        <td>EmpCity</td>
+        <td>EmpDeptno</td>
+    </tr>
+
+    @foreach (var item in ViewBag.empdata)
+    {
+        <tr>
+
+            <td>@item.Empid</td>
+            <td>@item.EmpName</td>
+            <td>@item.City</td>
+            <td>@item.Deptno</td>
+
+
+        </tr>
+    }
+
+
+</table>
+<hr />
+
+<h1>List of Employees using ViewData</h1>
+<label>Count=@ViewData["ecount"].ToString()</label>
+
+
+<table class="table table-bordered">
+    <tr>
+        <td>EmpID</td>
+        <td>EmpName</td>
+        <td>EmpCity</td>
+        <td>EmpDeptno</td>
+    </tr>
+
+    @foreach (EmpModel item in  (IEnumerable<EmpModel>)ViewData["empdatalist"])
+    {
+        <tr>
+
+            <td>@item.Empid</td>
+            <td>@item.EmpName</td>
+            <td>@item.City</td>
+            <td>@item.Deptno</td>
+
+
+        </tr>
+    }
+
+
+</table>
+
+
+

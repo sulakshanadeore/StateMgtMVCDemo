@@ -59,6 +59,15 @@ namespace StateMgtMVCDemo.Controllers
         }
 
 
+        public ActionResult DisplayEmployees()
+        {
+            ViewBag.empdata = emplist;
+            ViewData["empdatalist"] = emplist;
+            ViewData["ecount"] = emplist.Count;
+            ViewBag.cnt=emplist.Count;
+            return View();
+        }
+
        
 
 

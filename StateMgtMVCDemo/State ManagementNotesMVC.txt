@@ -24,7 +24,7 @@ Server: Session, Application,TempData.ViewBag,ViewData
 
 
 ViewBag----> uses the dynamic feature of C# to pass data from controller action to View.
-		No casting is required.
+		No casting is required.(only till one request)
 
 TempData----> 1)used to pass data from one action to another action of the same controller/another controller in actions.
 	       It requires casting. 
@@ -35,7 +35,8 @@ Example:
 Employee List(Index)---> hyperlink---->serachbydeptno----> list of employees deptwise hyperlink for Seedeptdata--->with a parameter/without a parameter
 
 
-
+ViewData: Requires casting.Only till one request.
+		          passing from controller to view
 
 
 
