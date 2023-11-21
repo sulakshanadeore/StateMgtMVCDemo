@@ -1,0 +1,45 @@
+State Management
+
+is a technique which is used for web apps to pass data from one page to another, or in the session as whole.
+
+why?
+Web apps use http/https protocol to be hosted, and as these two protocols are stateless protocols we need something to remember the data across request,
+which is achieved using state management techniques.
+
+How to do state Mgt in ASP.NET/What is used for state Mgt in ASP.NET MVC??
+client:Cookies, query string, view state 
+Server: Session, Application
+
+
+Cache-----> client/server---location=server/client(default server)
+
+How to do state Mgt in ASP.NET/What is used for state Mgt in ASP.NET MVC?
+client:Cookies, query string 
+Server: Session, Application,TempData.ViewBag,ViewData
+
+-------------------------------------------------------------------------
+1) How to pass data from Controller Action to View?
+2) How to pass data from one Controller Action to another Controller Action?
+3) How to pass data between actions in same Controller? TempData
+
+
+ViewBag----> uses the dynamic feature of C# to pass data from controller action to View.
+		No casting is required.
+
+TempData----> 1)used to pass data from one action to another action of the same controller/another controller in actions.
+	       It requires casting. 
+               2) Also from controller action to view
+
+
+Example:
+Employee List(Index)---> hyperlink---->serachbydeptno----> list of employees deptwise hyperlink for Seedeptdata--->with a parameter/without a parameter
+
+
+
+
+
+
+
+
+
+

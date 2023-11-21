@@ -1,0 +1,42 @@
+﻿@model StateMgtMVCDemo.Models.DeptModel
+
+@{
+    ViewBag.Title = "UsingParameter";
+}
+
+<h2>UsingParameter</h2>
+
+<div>
+    <h4>DeptModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Deptno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deptno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
