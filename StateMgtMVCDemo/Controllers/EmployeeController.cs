@@ -57,6 +57,39 @@ namespace StateMgtMVCDemo.Controllers
             return RedirectToAction("UsingParameter", "Department", new { id = Convert.ToInt32(TempData["passDeptno"]) });
 
         }
+        public ActionResult SaveData()
+        {
+            return View();
+        }
+
+
+            [HttpPost]
+        public ActionResult SaveData(EmpModel emp)
+        {
+            HttpCookie cookie = new HttpCookie("data");
+            cookie.Values.Add("empid", emp.Empid.ToString());
+            cookie.Values.Add("empname", emp.EmpName);
+            cookie.Values.Add("empcity", emp.City);
+            cookie.Expires = DateTime.Now.AddMinutes(5);
+            Response.Cookies.Add(cookie);
+            //return RedirectToAction("ShowEmpDataUsingCookie");
+            return View();
+                    }
+
+        public ActionResult ShowEmpDataUsingCookie()
+        {
+            HttpCookie cok=Request.Cookies["data"];
+            EmpModel data1 = new EmpModel();
+            data1.Empid=Convert.ToInt32(cok["empid"]);
+            data1.EmpName = cok["empname"].ToString();
+            data1.City = cok["empcity"].ToString();
+            ViewBag.Empid = data1.Empid;
+            ViewBag.EmpName = data1.EmpName;
+            ViewBag.EmpCity = data1.City;
+
+            return View();
+        }
+
 
 
         public ActionResult DisplayEmployees()

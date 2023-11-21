@@ -167,6 +167,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="State ManagementNotesMVC.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -187,6 +188,8 @@
     <Content Include="Views\Department\ShowDeptDetails.cshtml" />
     <Content Include="Views\Department\UsingParameter.cshtml" />
     <Content Include="Views\Employee\DisplayEmployees.cshtml" />
+    <Content Include="Views\Employee\SaveData.cshtml" />
+    <Content Include="Views\Employee\ShowEmpDataUsingCookie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
